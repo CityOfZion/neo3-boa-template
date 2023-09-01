@@ -17,3 +17,13 @@ recommend creating a virtual environment to isolate your Python environment.
 ├── README.md
 └── requirements.txt - Contains the name of the python packages needed to compile the smart contract and run the unit tests.
 ```
+
+## How to use NeoExpress to locally test your smart contract
+
+Install [NeoExpress requirements](https://github.com/neo-project/neo-express#requirements) and [NeoExpress](https://github.com/neo-project/neo-express#installation).
+This repository already has a `.neo-express` file, with two wallets named `admin` and `user`.
+
+Now, you can either test manually by running NeoExpress directly, or you can write a Python script that imports
+`NeoTestRunner`. On the `unit_tests` folder, you'll find that the classes that inherit `TestCase` already
+come with a `NeoTestRunner` object implemented. Check out the [Neo3-boa documentation](https://neo3.readthedocs.io/en/latest/sc/quickstart.html#testing)
+for more information on how to invoke methods and assert the results using `NeoTestRunner`.
